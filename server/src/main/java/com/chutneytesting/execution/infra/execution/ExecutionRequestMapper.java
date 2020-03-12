@@ -287,7 +287,7 @@ public class ExecutionRequestMapper {
         private Object transformSimpleInputValue(JsonNode in, String inputRead) {
             Optional<TaskDto> task = embeddedTaskEngine.getAllTasks().stream().filter(t -> t.getIdentifier().equals(this.type())).findFirst();
             if (task.isPresent()) {
-                Optional<InputsDto> optionalInput = task.get().getInputs().stream().filter(i -> i.getName().equals(inputRead)).findFirst();
+                Optional<InputsDto> optionalInput = task.get().inputs().stream().filter(i -> i.getName().equals(inputRead)).findFirst();
                 if (optionalInput.isPresent()) {
                     InputsDto input = optionalInput.get();
                     if (input.getType().getName().equals(Integer.class.getName())) {

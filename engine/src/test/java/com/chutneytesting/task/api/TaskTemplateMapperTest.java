@@ -28,7 +28,7 @@ public class TaskTemplateMapperTest {
 
         // Then
         assertThat(taskDto.getIdentifier()).isEqualTo(TASK_ID);
-        assertThat(taskDto.getInputs()).isEmpty();
+        assertThat(taskDto.inputs()).isEmpty();
         assertThat(taskDto.target()).isFalse();
     }
 
@@ -52,7 +52,7 @@ public class TaskTemplateMapperTest {
         // Then
         assertThat(taskDto.getIdentifier()).isEqualTo(TASK_ID);
         assertThat(taskDto.target()).isTrue();
-        assertThat(taskDto.getInputs()).containsExactly(new InputsDto(INPUT_NAME_2, INPUT_TYPE_2));
+        assertThat(taskDto.inputs()).containsExactly(new InputsDto(INPUT_NAME_2, INPUT_TYPE_2));
     }
 
     @Test
@@ -71,7 +71,7 @@ public class TaskTemplateMapperTest {
         // Then
         assertThat(taskDto.getIdentifier()).isEqualTo(TASK_ID);
         assertThat(taskDto.target()).isFalse();
-        assertThat(taskDto.getInputs())
+        assertThat(taskDto.inputs())
             .containsExactlyInAnyOrder(
                 new InputsDto("first", String.class),
                 new InputsDto("second", Integer.class),

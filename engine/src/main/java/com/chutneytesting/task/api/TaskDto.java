@@ -27,7 +27,8 @@ public class TaskDto {
         return target;
     }
 
-    public List<InputsDto> getInputs() {
+    @JsonProperty(value="inputs")
+    public List<InputsDto> inputs() {
         return inputs;
     }
 
