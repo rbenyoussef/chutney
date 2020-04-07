@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class TargetImpl implements Target {
 
-    public static final TargetImpl NONE = TargetImpl.builder().build();
+    public static final Target NONE = TargetImpl.builder().build();
 
     public final String name;
     public final String url;
