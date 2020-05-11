@@ -64,7 +64,7 @@ public class GlacioAdapter {
     }
 
     private StepDefinition buildNonExecutableStep(List<StepDefinition> subSteps, String text) {
-        return new StepDefinition(text, null, "", null, emptyMap(), subSteps, emptyMap());
+        return new StepDefinition(text, null, "", null, emptyMap(), subSteps, emptyMap(), "");
     }
 
     private List<StepDefinition> toStepSubStepsDefinitions(Locale lang, Step step) {
